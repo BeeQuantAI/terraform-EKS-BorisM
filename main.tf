@@ -4,6 +4,14 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = "2.31.0"
+    }
+    argocd = {
+      source = "oboukili/argocd"
+      version = "6.1.1"
+    }
   }
 }
 resource "aws_vpc" "platform_api_vpc" {
